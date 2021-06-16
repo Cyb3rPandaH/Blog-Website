@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator>
+  <link href="https://blog.openthreatresearch.com/tag/cobalt-strike/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://blog.openthreatresearch.com/" rel="alternate" type="text/html" />
+  <updated>2021-06-16T10:50:21-04:00</updated>
+  <id>https://blog.openthreatresearch.com/tag/cobalt-strike/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Open Threat Research Blog | </title>
+  
+
+  
+    <subtitle>Sharing and collaborating to empower the Infosec community!</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Simulating Cobalt Strike Beacon Activity</title>
+      <link href="https://blog.openthreatresearch.com/apt-simulator-cobalt-strike-beacon" rel="alternate" type="text/html" title="Simulating Cobalt Strike Beacon Activity" />
+      <published>2021-06-16T08:00:00-04:00</published>
+      <updated>2021-06-16T08:00:00-04:00</updated>
+      <id>https://blog.openthreatresearch.com/apt-simulator-cobalt-strike-beacon</id>
+      <content type="html" xml:base="https://blog.openthreatresearch.com/apt-simulator-cobalt-strike-beacon">&lt;p&gt;In this quick blogpost, I will share the steps that I completed to simulate Cobalt Strike beacon activity using &lt;a href=&quot;https://github.com/NextronSystems/APTSimulator&quot;&gt;APTSimulator&lt;/a&gt; in a Windows 10 virtual machine.&lt;/p&gt;
+
+&lt;h2 id=&quot;pre-requisites&quot;&gt;Pre-requisites&lt;/h2&gt;
+&lt;p&gt;In order to complete the steps of this blogpost, you need to clone the APTSimulator project in your computer.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-using-git-clone&quot;&gt;a) Using Git Clone&lt;/h3&gt;
+&lt;p&gt;Run the following commands to clone the repository in your preferred directory.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/NextronSystems/APTSimulator.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;b-downloading-the-github-repository-in-zip-format&quot;&gt;b) Downloading the GitHub Repository in Zip Format&lt;/h3&gt;
+&lt;p&gt;Use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Download Zip&lt;/code&gt; option from the GitHub website to download the repository files in your preferred directory.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/blog/cobalt_strike_beacon_simulation/2021-06-14_01_zip_download.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If the Windows Defender antivirus application is on, it might block the download process.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/blog/cobalt_strike_beacon_simulation/2021-06-14_02_threat_found.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are some examples of files categorized as threats by Windows Defender&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/blog/cobalt_strike_beacon_simulation/2021-06-14_03_current_threats_found.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After turning the Windows Defender antivirus application off, you should be able to download the APTSimulator zip folder.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/blog/cobalt_strike_beacon_simulation/2021-06-14_04_zip_file_downloaded.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After downloading the zip folder, you will need to extract the APTSimulator files.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/blog/cobalt_strike_beacon_simulation/2021-06-14_05_extracting_zip_content.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Select a preferred destination for the APTSimulator files. For the purpose of this blogpost, I will use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Documents&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/blog/cobalt_strike_beacon_simulation/2021-06-14_06_selecting_zip_destination.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You should be able to see the APTSimulator files now.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/blog/cobalt_strike_beacon_simulation/2021-06-14_07_zip_files_extracted.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;simulating-cobalt-strike-beaconing&quot;&gt;Simulating Cobalt Strike Beaconing&lt;/h2&gt;
+&lt;h3 id=&quot;1-extracting-tools-and-files&quot;&gt;1) Extracting Tools and Files&lt;/h3&gt;
+&lt;p&gt;Open the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Command Prompt (CMD)&lt;/code&gt; with Administrator rights.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/blog/cobalt_strike_beacon_simulation/2021-06-14_08_cmd_administrator.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Execute the following commands to change your current directory to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;APTSimulator-master&lt;/code&gt; folder and run the &lt;strong&gt;build_pack.bat&lt;/strong&gt; file.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd Documents/APTSimulator-master
+
+build_pack.bat
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/blog/cobalt_strike_beacon_simulation/2021-06-14_09_build_pack.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2-executing-aptsimulator&quot;&gt;2) Executing APTSimulator&lt;/h3&gt;
+&lt;p&gt;In the same Command Prompt (CMD) window with Administrator rights, use the following commands to execute the &lt;strong&gt;APTSimulator.bat&lt;/strong&gt; file.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;APTSimulator.bat
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/blog/cobalt_strike_beacon_simulation/2021-06-14_10_aptsimulator_command.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After executing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.bat&lt;/code&gt; file, you will get a warning message that you need to answer with &lt;strong&gt;Y&lt;/strong&gt; (Yes).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/blog/cobalt_strike_beacon_simulation/2021-06-14_11_aptsimulator_warning.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After answering &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Yes&lt;/code&gt; to the warning message, you will see all the options provided by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;APTSimulator&lt;/code&gt;. For the purpose of this blogpost, I will use the &lt;strong&gt;CobaltStrike Beacon Simulation&lt;/strong&gt; option that is represented by the letter &lt;strong&gt;C&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/blog/cobalt_strike_beacon_simulation/2021-06-14_12_aptsimulator_options.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;3-simulating-cobalt-strike-beaconing&quot;&gt;3) Simulating Cobalt Strike Beaconing&lt;/h3&gt;
+&lt;p&gt;Running option C will allow you to start the simulation process.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/blog/cobalt_strike_beacon_simulation/2021-06-14_13_cobalt_strike_simulation.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After the creation of named pipes and services, you will see HTTP beaconing activity (http://10.0.2.15/pixel.gif).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/blog/cobalt_strike_beacon_simulation/2021-06-14_14_cobalt_strike_beaconing.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;do-you-want-to-analyze-sample-data-for-this-behavior&quot;&gt;Do you want to analyze sample data for this behavior?&lt;/h2&gt;
+&lt;p&gt;I have created a pre-recorded Mordor dataset with Sysmon, Security, and System events that were triggered when simulating &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cobalt Strike Beacon Activity&lt;/code&gt; using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;APTSimulator&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mordordatasets.com/notebooks/small/windows/05_defense_evasion/SDWIN-210611210814.html&quot;&gt;Dataset metadata&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://raw.githubusercontent.com/OTRF/mordor/master/datasets/small/windows/other/aptsimulator_cobaltstrike.zip&quot;&gt;Dataset&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://github.com/NextronSystems/APTSimulator&lt;/li&gt;
+  &lt;li&gt;https://twitter.com/cyb3rops/status/1403253268051107840&lt;/li&gt;
+  &lt;li&gt;https://twitter.com/OTR_Community/status/1403551913459728387&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Jose Rodriguez</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="cobalt-strike" />
+      
+        <category term="mordor" />
+      
+
+      
+        <summary type="html">In this quick blogpost, I will share the steps that I completed to simulate Cobalt Strike beacon activity using APTSimulator in a Windows 10 virtual machine.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

@@ -240,7 +240,7 @@ into the {body} of the default.hbs template -->
   <li>Download trusted SSL certificate</li>
   <li>Install trusted certificate</li>
   <li>Export certificate and private keys as a .pfx file</li>
-  <li>Share certificaet with servers (i.e. Domain Controller and ADFS)</li>
+  <li>Share certificate with servers (i.e. Domain Controller and ADFS)</li>
 </ul>
 
 <h2 id="1-create-certificate-signing-request-csr-file">1. Create Certificate Signing Request (.CSR) File</h2>
@@ -262,9 +262,9 @@ into the {body} of the default.hbs template -->
 
 <p><strong>Create .CSR File</strong></p>
 
-<p>As I mentioned before, in my environment, I decided to use a Positive SSL Wildcard (multidomain) certificate. Therefore, when creating the .csr file, I set a <code class="highlighter-rouge">*</code> wildcard as a prefix of my domain <code class="highlighter-rouge">.yourdomain.com</code> for the<code class="highlighter-rouge">Subject Common Name</code> property of the request. You do not have to do that. That is just an option.</p>
+<p>As I mentioned before, in my environment, I decided to use a Positive SSL Wildcard (multidomain) certificate. Therefore, when creating the .csr file, I set a <code class="language-plaintext highlighter-rouge">*</code> wildcard as a prefix of my domain <code class="language-plaintext highlighter-rouge">.yourdomain.com</code> for the<code class="language-plaintext highlighter-rouge">Subject Common Name</code> property of the request. You do not have to do that. That is just an option.</p>
 
-<p>You can simple have <code class="highlighter-rouge">yourdomain.com</code> and that’s it. It is cheaper to buy a single domain SSL certificate.</p>
+<p>You can simple have <code class="language-plaintext highlighter-rouge">yourdomain.com</code> and that’s it. It is cheaper to buy a single domain SSL certificate.</p>
 
 <pre><code class="language-PowerShell">Get-CertSigningReq -FriendlyName "*.youdomain.com site certificate" -Description "ADFS yourdomain.com certificate" -SubjectCommonName "*.yourdomain.com" -SubjectOrganizationUnit "Research" -SubjectOrganization "yourdomain.com" -SubjectCountry "US" -SubjectState "Texas" -SubjectLocality "Texas" -CertFilePath "Request.csr"
 
@@ -287,7 +287,7 @@ get-content .\Request.csr
 
 <h2 id="3-activate-ssl-certificate">3. Activate SSL certificate</h2>
 
-<p>In my case, I started the process by clicking on the <code class="highlighter-rouge">Activate</code> button shown in the previous image. I then was prompted to enter the contents of the .csr file</p>
+<p>In my case, I started the process by clicking on the <code class="language-plaintext highlighter-rouge">Activate</code> button shown in the previous image. I then was prompted to enter the contents of the .csr file</p>
 
 <p><img src="assets/images/blog/2020-12-28_04_activate_cert_csr_input.png" alt="" /></p>
 
@@ -388,6 +388,8 @@ Export-PfxCertificate -FilePath C:\ADFS.PFX -Cert $InstalledCert -Password (Conv
                 
                     
                 
+                    
+                
                 <!-- /author  -->
             </footer>
 
@@ -439,6 +441,18 @@ Export-PfxCertificate -FilePath C:\ADFS.PFX -Cert $InstalledCert -Password (Conv
                                   
                                 
                                   
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
                                     
                                         
                                         
@@ -449,6 +463,20 @@ Export-PfxCertificate -FilePath C:\ADFS.PFX -Cert $InstalledCert -Password (Conv
                                 
                                   
                                     
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
                                   
                                 
                             </ul>
@@ -518,6 +546,8 @@ Export-PfxCertificate -FilePath C:\ADFS.PFX -Cert $InstalledCert -Password (Conv
                 
                     
                 
+                    
+                
                 <span class="reading-time">
                     
                     
@@ -531,6 +561,71 @@ Export-PfxCertificate -FilePath C:\ADFS.PFX -Cert $InstalledCert -Password (Conv
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/installing_python_library_vscode">
+                <div class="post-card-image" style="background-image: url(/assets/images/blog/2020-12-04_00_pip_cover.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/installing_python_library_vscode">
+                <header class="post-card-header">
+                    
+                        
+                            
+                               <span class="post-card-tags">Jupyter-notebook</span>
+                            
+                        
+                            
+                               <span class="post-card-tags">Vscode</span>
+                            
+                        
+                            
+                                <span class="post-card-tags">Python</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Installing a Python Library in Visual Studio Code - Windows</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/authors/avatar-jose.jpg" alt="Jose Rodriguez" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/jose/">Jose Rodriguez</a>
+                        </span>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
             
 
         </div>

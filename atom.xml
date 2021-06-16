@@ -8,6 +8,52 @@
     
       
       <item>
+        <title>Simulating Cobalt Strike Beacon Activity</title>
+        
+          <description>&lt;p&gt;In this quick blogpost, I will share the steps that I completed to simulate Cobalt Strike beacon activity using &lt;a href=&quot;https://github.com/NextronSystems/APTSimulator&quot;&gt;APTSimulator&lt;/a&gt; in a Windows 10 virtual machine.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 16 Jun 2021 08:00:00 -0400</pubDate>
+        <link>
+        https://blog.openthreatresearch.com/apt-simulator-cobalt-strike-beacon</link>
+        <guid isPermaLink="true">https://blog.openthreatresearch.com/apt-simulator-cobalt-strike-beacon</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Malware Analysis Series - Part 2, How to Isolate our Homelab with Network Segmentation</title>
+        
+          <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction:&lt;/h1&gt;
+
+</description>
+        
+        <pubDate>Wed, 26 May 2021 08:00:00 -0400</pubDate>
+        <link>
+        https://blog.openthreatresearch.com/how_to_isolate_homelab</link>
+        <guid isPermaLink="true">https://blog.openthreatresearch.com/how_to_isolate_homelab</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Malware Analysis Series - Part 1, Setting Up a Basic Malware Analysis Virtual Lab</title>
+        
+          <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction:&lt;/h1&gt;
+&lt;p&gt;Since joining the Cyber Security and Intelligence community in 2016, I’ve always had a strong interest in malware analysis.  The process of breaking something down, looking at its individual parts, testing hypotheses as to what its capabilities are.  This is something that has always drawn me to the field.  Its also a field that is extremely new to me.  I’ve only just started to learn how to setup a proper lab and all the various techniques that exist to breakdown and understand malware.  Because of that, I wanted to start a blog series to document my process for others, in hopes that my journey will make it easier for anyone trying to get started in the field.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 29 Apr 2021 08:00:00 -0400</pubDate>
+        <link>
+        https://blog.openthreatresearch.com/how_to_set_up_homelab_blog</link>
+        <guid isPermaLink="true">https://blog.openthreatresearch.com/how_to_set_up_homelab_blog</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Creating and Starting a Windows Service Remotely Using NtObjectManager Via Remote Procedure Calls (RPC) Over SMB</title>
         
           <description>&lt;p&gt;I wanted to learn more about NtObjectManager and the latest support for named pipes RPC clients so I decided to give it a try.&lt;/p&gt;
@@ -38,6 +84,51 @@
     
       
       <item>
+        <title>PySpark.SQL and Jupyter Notebooks on Visual Studio Code (Python kernel)</title>
+        
+          <description>&lt;p&gt;In this blogpost, I will share the steps that you can follow in order to execute PySpark.SQL (Spark + Python) commands using a Jupyter Notebook on Visual Studio Code (VSCode). During the development of this blogpost I used a Python kernel in a Windows computer.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 02 Jan 2021 07:00:00 -0500</pubDate>
+        <link>
+        https://blog.openthreatresearch.com/spark_jupyter_notebook_vscode</link>
+        <guid isPermaLink="true">https://blog.openthreatresearch.com/spark_jupyter_notebook_vscode</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Importing a Mordor Dataset with Jupyter Notebooks on Visual Studio Code (Python kernel)</title>
+        
+          <description>&lt;p&gt;In this blogpost, I will share the steps that you can follow in order to import a Mordor dataset to your workspace on Visual Studio Code (VSCode) using a Jupyter Notebook. During the development of this blogpost I used a Python kernel in a Windows computer.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 01 Jan 2021 07:00:00 -0500</pubDate>
+        <link>
+        https://blog.openthreatresearch.com/importing-mordor-dataset-jupyter-notebook-vscode</link>
+        <guid isPermaLink="true">https://blog.openthreatresearch.com/importing-mordor-dataset-jupyter-notebook-vscode</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>My First Jupyter Notebook on Visual Studio Code (Python kernel)</title>
+        
+          <description>&lt;p&gt;In this blogpost, I will share the steps that you can follow in order to generate and use a Jupyter Notebook on Visual Studio Code (VSCode). During the development of this blogpost I used a Python kernel in a Windows computer.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 01 Jan 2021 07:00:00 -0500</pubDate>
+        <link>
+        https://blog.openthreatresearch.com/first_jupyter_notebook_vscode</link>
+        <guid isPermaLink="true">https://blog.openthreatresearch.com/first_jupyter_notebook_vscode</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>How to Set Up Azure AD Connect to Sync and Federate Custom Domain with On-Prem Directory</title>
         
           <description>&lt;p&gt;I deployed a lab environment to learn more about federation access between an “on-prem” lab environment and the cloud. I basically wanted to learn how to federate a custom domain in my Azure AD tenant from my Microsoft 365 subscription with on-prem directory.&lt;/p&gt;
@@ -55,7 +146,7 @@
       <item>
         <title>How to Create an Azure Storage Account via Azure Resource Manager Templates to Host Private Files</title>
         
-          <description>&lt;p&gt;I recently created an Azure Resource Manager (ARM) template where I needed to install a Trusted Certificate Authority (CA) signed SSL certificate on a Windows server VM at deployment time. I tried to pass it as a base64 blob (&lt;code class=&quot;highlighter-rouge&quot;&gt;securestring&lt;/code&gt;) to one of the template parameters, but it was still showing in PowerShell logs. Therefore, I decided to use an &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview&quot;&gt;Azure Storage Account&lt;/a&gt; to host the certificate in a private container and access it via its own &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview&quot;&gt;Shared Access Signature (SAS)&lt;/a&gt; string.&lt;/p&gt;
+          <description>&lt;p&gt;I recently created an Azure Resource Manager (ARM) template where I needed to install a Trusted Certificate Authority (CA) signed SSL certificate on a Windows server VM at deployment time. I tried to pass it as a base64 blob (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;securestring&lt;/code&gt;) to one of the template parameters, but it was still showing in PowerShell logs. Therefore, I decided to use an &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview&quot;&gt;Azure Storage Account&lt;/a&gt; to host the certificate in a private container and access it via its own &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview&quot;&gt;Shared Access Signature (SAS)&lt;/a&gt; string.&lt;/p&gt;
 
 </description>
         
@@ -108,6 +199,111 @@
         <link>
         https://blog.openthreatresearch.com/csr-ssl-certificate-activation</link>
         <guid isPermaLink="true">https://blog.openthreatresearch.com/csr-ssl-certificate-activation</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Installing a Python Library in Visual Studio Code - Windows</title>
+        
+          <description>&lt;p&gt;In this quick blogpost, I will share the steps that you can follow in order to install a Python library using pip through either the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Terminal&lt;/code&gt; or a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jupyter Notebook&lt;/code&gt; in Visual Studio Code (VSCode) on a Windows computer.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 04 Dec 2020 07:00:00 -0500</pubDate>
+        <link>
+        https://blog.openthreatresearch.com/installing_python_library_vscode</link>
+        <guid isPermaLink="true">https://blog.openthreatresearch.com/installing_python_library_vscode</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Installing Visual Studio Code - Windows</title>
+        
+          <description>&lt;p&gt;In this quick blogpost, I will share the steps that you can follow in order to install Visual Studio Code (1.54.3) &lt;em&gt;(VSCode)&lt;/em&gt; on a Windows computer using Firefox as web browser.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 03 Dec 2020 07:00:00 -0500</pubDate>
+        <link>
+        https://blog.openthreatresearch.com/installing_vscode_windows</link>
+        <guid isPermaLink="true">https://blog.openthreatresearch.com/installing_vscode_windows</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Installing Python Interpreter - Windows</title>
+        
+          <description>&lt;p&gt;In this quick blogpost, I will share the steps that you can follow in order to install the Python (3.9.2) interpreter on a Windows computer using Firefox as web browser.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 03 Dec 2020 07:00:00 -0500</pubDate>
+        <link>
+        https://blog.openthreatresearch.com/installing_python_interpreter</link>
+        <guid isPermaLink="true">https://blog.openthreatresearch.com/installing_python_interpreter</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Installing Python Extension for Visual Studio Code - Windows</title>
+        
+          <description>&lt;p&gt;In this quick blogpost, I will share the steps that you can follow in order to install the Python extension for Visual Studio Code &lt;em&gt;(VSCode)&lt;/em&gt; on a Windows computer using Firefox as web browser.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 03 Dec 2020 07:00:00 -0500</pubDate>
+        <link>
+        https://blog.openthreatresearch.com/installing_python_extension_vscode</link>
+        <guid isPermaLink="true">https://blog.openthreatresearch.com/installing_python_extension_vscode</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Installing Git - Windows</title>
+        
+          <description>&lt;p&gt;In this quick blogpost, I will share the steps that you can follow in order to install git(2.31.0) on a Windows computer using Firefox as web browser. After completing all the steps of this blog, you should be able to execute git commands using the command prompt.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 02 Dec 2020 07:00:00 -0500</pubDate>
+        <link>
+        https://blog.openthreatresearch.com/installing_git</link>
+        <guid isPermaLink="true">https://blog.openthreatresearch.com/installing_git</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Installing Jekyll - Windows</title>
+        
+          <description>&lt;p&gt;In this quick blogpost, I will share the steps that you can follow in order to install jekyll (4.2.0) on a Windows computer using Firefox as web browser and the command prompt. After completing all the steps of this blog, you should be able to deploy a website locally in your computer.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 01 Dec 2020 07:00:00 -0500</pubDate>
+        <link>
+        https://blog.openthreatresearch.com/installing_jekyll</link>
+        <guid isPermaLink="true">https://blog.openthreatresearch.com/installing_jekyll</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Installing Java - Windows</title>
+        
+          <description>&lt;p&gt;In this blogpost, I will share the steps that you can follow in order to install Java (1.8.0_281) on a Windows computer using Firefox as web browser.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 01 Dec 2020 07:00:00 -0500</pubDate>
+        <link>
+        https://blog.openthreatresearch.com/installing_java</link>
+        <guid isPermaLink="true">https://blog.openthreatresearch.com/installing_java</guid>
       </item>
       
     
